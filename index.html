@@ -6,40 +6,82 @@
   <title>Brian Freeman Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
+    <!-- Modern Background -->
+    <div class="modern-bg"></div>
+
+    <!-- Dropdown Menu -->
+    <nav class="dropdown-menu">
+      <button id="menu-toggle">☰ Menu</button>
+      <div id="menu-content">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">𝑷𝒓𝒐𝒋𝒆𝒄𝒕𝒔</a></li>
+          <li>
+            <a href="#biography" id="bio-access">𝑩𝒊𝒐𝒈𝒓𝒂𝒑𝒉𝒚</a>
+          </li>
+          <li>
+            <a href="#hobbies">𝑯𝒐𝒃𝒃𝒊𝒆𝒔</a>
+            <ul class="sub-dropdown">
+              <li>🎨 Graphic Design</li>
+              <li>📚 Reading</li>
+              <li>🎮 Gaming</li>
+              <li>🌍 Traveling</li>
+            </ul>
+          </li>
+          <li><a href="#acknowledgment">𝑨𝒄𝒌𝒏𝒐𝒘𝒍𝒆𝒅𝒈𝒎𝒆𝒏𝒕</a></li>
+        </ul>
+        <button id="menu-close">Close</button>
+      </div>
+    </nav>
 
     <!-- Profile Section -->
     <section class="profile">
       <div class="profile-picture">
-        <img src="profile.jpg" alt="Brian Freeman">
+        <div class="digital-frame">
+          <img src="profile.jpg" alt="Brian Freeman">
+        </div>
       </div>
       <div class="intro">
-        <h1>Hi, 𝐈'𝐦<span>𝐁𝐫𝐢𝐚𝐧 𝐅𝐫𝐞𝐞𝐦𝐚𝐧</span></h1>
-        <p>I'm a <strong>UI/UX Designer</strong> and <strong>Developer</strong></p>
-        <button onclick="window.location.href='mailto:b37614310@gmail.com'">𝐇𝐢𝐫𝐞 𝐌𝐞 ✅</button>
+        <h1>𝐇𝐢, 𝐈'𝐦 <span>𝐁𝐫𝐢𝐚𝐧 𝐅𝐫𝐞𝐞𝐦𝐚𝐧</span></h1>
+        <p>𝐈'𝐦 𝐚 <strong> 𝐔𝐈/𝐔𝐗 𝐃𝐞𝐬𝐢𝐠𝐧𝐞𝐫</strong> and <strong>𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫</strong></p>
+        <button onclick="window.location.href='mailto:b37614310@gmail.com'">𝐇𝐢𝐫𝐞 𝐌𝐞✅</button>
       </div>
     </section>
 
     <!-- Hobbies Section -->
-    <section class="hobbies">
+    <section id="hobbies">
       <h2>My Hobbies</h2>
       <ul>
-        <li>🎨 𝑮𝒓𝒂𝒑𝒉𝒊𝒄 𝑫𝒆𝒔𝒊𝒈𝒏</li>
+        <li>🎨 </li>
         <li>📚 𝑹𝒆𝒂𝒅𝒊𝒏𝒈</li>
         <li>🎮 𝑮𝒂𝒎𝒊𝒏𝒈</li>
-        <li>🌍 𝑻𝒓𝒂𝒗𝒆𝒍𝒍𝒊𝒏𝒈</li>
+        <li>😍😍😍</li>
       </ul>
     </section>
 
     <!-- Social Media Links -->
     <footer>
-      <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" target="_blank" class="social-icon instagram">Instagram</a>
-      <a href="https://wa.me/+254746415264" target="_blank" class="social-icon whatsapp">WhatsApp</a>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/1234567890?text=𝐇𝐢%20𝐁𝐫𝐢𝐚𝐧," target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <p>© 2025 𝑩𝒓𝒊𝒂𝒏 𝑭𝒓𝒆𝒆𝒎𝒂𝒏.𝑨𝒍𝒍 𝒓𝒊𝒈𝒉𝒕𝒔 𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅.</p>
     </footer>
+
+    <!-- Analog Clock -->
+    <div class="clock">
+      <div class="hour"></div>
+      <div class="minute"></div>
+      <div class="second"></div>
+    </div>
   </div>
 </body>
 </html>
