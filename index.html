@@ -3,35 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Brian Wachiye - Modern and Dynamic Portfolio">
-  <meta name="author" content="Brian Wachiye">
-  <title>Brian Wachiye | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Brian Freeman Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <div class="container">
-    <!-- Portfolio Card -->
-    <div class="portfolio-card">
-      <!-- Rotating Background -->
-      <div class="rotating-container">
-        <div class="rotating-circle"></div>
-        <img src="profile.jpg" alt="Brian Wachiye" class="profile-photo">
-      </div>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
 
-      <!-- Content Section -->
-      <div class="portfolio-content">
-        <h1 class="intro-text">
-          𝐈'𝐦 <span class="highlight">𝐁𝐫𝐢𝐚𝐧 𝐖𝐚𝐜𝐡𝐢𝐲𝐞</span>
-        </h1>
-        <p class="role-description">
-          𝐈'𝐦 𝐚 𝐖𝐞𝐛 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫, 𝐔𝐈/𝐔𝐗 𝐃𝐞𝐬𝐢𝐠𝐧𝐞𝐫, 𝐚𝐧𝐝 𝐂𝐫𝐞𝐚𝐭𝐢𝐯𝐞 𝐓𝐞𝐜𝐡𝐧𝐨𝐥𝐨𝐠𝐢𝐬𝐭
-        </p>
-        <button class="hire-button" onclick="hireMe()">𝑯𝒊𝒓𝒆 𝒎𝒆🫦</button>
+    <!-- Profile Section -->
+    <section class="profile">
+      <div class="profile-picture">
+        <img src="profile.jpg" alt="Brian Freeman">
       </div>
-    </div>
+      <div class="intro">
+        <h1>Hi, 𝐈'𝐦<span>𝐁𝐫𝐢𝐚𝐧 𝐅𝐫𝐞𝐞𝐦𝐚𝐧</span></h1>
+        <p>I'm a <strong>UI/UX Designer</strong> and <strong>Developer</strong></p>
+        <button onclick="window.location.href='mailto:b37614310@gmail.com'">𝐇𝐢𝐫𝐞 𝐌𝐞 ✅</button>
+      </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>🎨 𝑮𝒓𝒂𝒑𝒉𝒊𝒄 𝑫𝒆𝒔𝒊𝒈𝒏</li>
+        <li>📚 𝑹𝒆𝒂𝒅𝒊𝒏𝒈</li>
+        <li>🎮 𝑮𝒂𝒎𝒊𝒏𝒈</li>
+        <li>🌍 𝑻𝒓𝒂𝒗𝒆𝒍𝒍𝒊𝒏𝒈</li>
+      </ul>
+    </section>
+
+    <!-- Social Media Links -->
+    <footer>
+      <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" target="_blank" class="social-icon instagram">Instagram</a>
+      <a href="https://wa.me/+254746415264" target="_blank" class="social-icon whatsapp">WhatsApp</a>
+    </footer>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
