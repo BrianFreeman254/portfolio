@@ -1,25 +1,46 @@
-// Open Email Function
-function hireMe() {
-  window.location.href = "mailto:brianwachiye2004@gmail.com";
-}
+document.addEventListener('DOMContentLoaded', () => {
+  // Dropdown Menu Toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const menuClose = document.getElementById('menu-close');
+  const menuContent = document.getElementById('menu-content');
 
-// Dynamic Background Color on Load
-document.addEventListener("DOMContentLoaded", () => {
-  const body = document.body;
-  body.style.background = "linear-gradient(to bottom right, #e6f7ff, #f2f2f2)";
-});
+  menuToggle.addEventListener('click', () => {
+    menuContent.style.display = 'block';
+  });
 
-// Button Hover Effect
-const hireButton = document.querySelector(".hire-button");
+  menuClose.addEventListener('click', () => {
+    menuContent.style.display = 'none';
+  });
 
-hireButton.addEventListener("mousemove", (e) => {
-  const rect = hireButton.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
+  // Biography Section Security
+  const bioAccess = document.getElementById('bio-access');
+  bioAccess.addEventListener('click', (e) => {
+    e.preventDefault();
+    const pin = prompt('Enter PIN to access Biography:');
+    if (pin === '822775') {
+      alert('Access Granted!');
+      window.location.href = '#biography';
+    } else {
+      alert('Access Denied. Incorrect PIN!');
+    }
+  });
 
-  hireButton.style.background = `radial-gradient(circle at ${x}px ${y}px, #00b4d8, #007acc)`;
-});
+  // Analog Clock
+  const hourHand = document.querySelector('.hour');
+  const minuteHand = document.querySelector('.minute');
+  const secondHand = document.querySelector('.second');
 
-hireButton.addEventListener("mouseleave", () => {
-  hireButton.style.background = "#007acc";
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours() % 12;
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
+
+    hourHand.style.transform = `rotate(${(360 / 12) * hours}deg)`;
+    minuteHand.style.transform = `rotate(${(360 / 60) * minutes}deg)`;
+    secondHand.style.transform = `rotate(${(360 / 60) * seconds}deg)`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // Initial call
 });
