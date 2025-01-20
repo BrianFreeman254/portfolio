@@ -1,158 +1,153 @@
 /* General Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom right, #f9f9f9, #e8efff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* Container Styling */
-.container {
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Portfolio Card */
-.portfolio-card {
-  background: #fff;
-  border-radius: 25px;
-  padding: 30px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Profile Section with Animations */
-.profile-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.profile-frame {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  animation: pulse 2s infinite;
-  transition: transform 0.3s ease-in-out;
-}
-
-.profile-frame:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(0, 122, 204, 0.6);
-}
-
-.profile-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Pulse Effect Animation */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 15px rgba(0, 122, 204, 0.4);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  50% {
-    box-shadow: 0 0 25px rgba(0, 122, 204, 0.7);
+  
+  body, html {
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    color: #333;
   }
-  100% {
-    box-shadow: 0 0 15px rgba(0, 122, 204, 0.4);
+  
+  /* Container */
+  .container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: url('https://www.google.com/imgres?q=wallpapers%20for%20portfolio&imgurl=https%3A%2F%2Ffree-3dtextureshd.com%2Fwp-content%2Fuploads%2F2024%2F02%2F5.jpg.webp&imgrefurl=https%3A%2F%2Ffree-3dtextureshd.com%2Fdownload%2Fabstract-colorful-wallpaper-ultra-hd-4k-background-desktop-phone-free-download%2F&docid=rHrYO_FAK-Wv5M&tbnid=ZZHGHT0sd2PowM&vet=12ahUKEwikgdSt2oOLAxUPnf0HHXcEPQo4ChAzegQIRBAA..i&w=1000&h=563&hcb=2&ved=2ahUKEwikgdSt2oOLAxUPnf0HHXcEPQo4ChAzegQIRBAA') no-repeat center center fixed;
+    background-size: cover;
   }
-}
-
-/* Content Section */
-.portfolio-content {
-  padding: 10px 20px;
-}
-
-.intro-text {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.highlight {
-  color: #007acc;
-  background: linear-gradient(to right, #007acc, #00b4d8);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.role-description {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.hire-button {
-  padding: 12px 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  background: #007acc;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 122, 204, 0.3);
-}
-
-.hire-button:hover {
-  background: #005f9e;
-  transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .portfolio-card {
-    padding: 20px;
+  
+  /* Animated Background */
+  .animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(120deg, rgba(255, 0, 150, 0.4), rgba(0, 204, 255, 0.4));
+    animation: moveBg 10s linear infinite;
   }
-
-  .intro-text {
-    font-size: 1.8rem;
+  
+  @keyframes moveBg {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
   }
-
-  .profile-photo {
-    width: 120px;
-    height: 120px;
+  
+  /* Profile Section */
+  .profile {
+    margin-top: 50px;
   }
-
-  .profile-frame {
-    width: 120px;
-    height: 120px;
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    display: inline-block;
   }
-}
-
-@media (max-width: 480px) {
-  .intro-text {
-    font-size: 1.5rem;
+  
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
-
-  .role-description {
-    font-size: 0.9rem;
+  
+  .intro {
+    margin: 20px 0;
   }
-
-  .hire-button {
-    padding: 10px 25px;
-    font-size: 0.9rem;
+  
+  .intro h1 {
+    font-size: 2em;
+    color: #222;
   }
-}
+  
+  .intro h1 span {
+    color: #ff0075;
+  }
+  
+  .intro p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #444;
+  }
+  
+  button {
+    background-color: #ff0075;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e60068;
+    transform: scale(1.05);
+  }
+  
+  /* Hobbies Section */
+  .hobbies {
+    margin: 50px 0;
+  }
+  
+  .hobbies h2 {
+    font-size: 1.8em;
+    color: #222;
+    margin-bottom: 20px;
+  }
+  
+  .hobbies ul {
+    list-style: none;
+  }
+  
+  .hobbies li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .hobbies li:hover {
+    transform: translateX(10px);
+  }
+  
+  /* Footer - Social Icons */
+  footer {
+    margin-bottom: 50px;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .social-icon.instagram {
+    background-color: #e4405f;
+  }
+  
+  .social-icon.whatsapp {
+    background-color: #25d366;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  
