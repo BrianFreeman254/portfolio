@@ -1,153 +1,125 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    font-family: 'Arial', sans-serif;
-    overflow-x: hidden;
-    color: #333;
-  }
-  
-  /* Container */
-  .container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    background: url('https://www.google.com/imgres?q=wallpapers%20for%20portfolio&imgurl=https%3A%2F%2Ffree-3dtextureshd.com%2Fwp-content%2Fuploads%2F2024%2F02%2F5.jpg.webp&imgrefurl=https%3A%2F%2Ffree-3dtextureshd.com%2Fdownload%2Fabstract-colorful-wallpaper-ultra-hd-4k-background-desktop-phone-free-download%2F&docid=rHrYO_FAK-Wv5M&tbnid=ZZHGHT0sd2PowM&vet=12ahUKEwikgdSt2oOLAxUPnf0HHXcEPQo4ChAzegQIRBAA..i&w=1000&h=563&hcb=2&ved=2ahUKEwikgdSt2oOLAxUPnf0HHXcEPQo4ChAzegQIRBAA') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  /* Animated Background */
-  .animated-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(120deg, rgba(255, 0, 150, 0.4), rgba(0, 204, 255, 0.4));
-    animation: moveBg 10s linear infinite;
-  }
-  
-  @keyframes moveBg {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-  
-  /* Profile Section */
-  .profile {
-    margin-top: 50px;
-  }
-  
-  .profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #fff;
-    display: inline-block;
-  }
-  
-  .profile-picture img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .intro {
-    margin: 20px 0;
-  }
-  
-  .intro h1 {
-    font-size: 2em;
-    color: #222;
-  }
-  
-  .intro h1 span {
-    color: #ff0075;
-  }
-  
-  .intro p {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #444;
-  }
-  
-  button {
-    background-color: #ff0075;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #e60068;
-    transform: scale(1.05);
-  }
-  
-  /* Hobbies Section */
-  .hobbies {
-    margin: 50px 0;
-  }
-  
-  .hobbies h2 {
-    font-size: 1.8em;
-    color: #222;
-    margin-bottom: 20px;
-  }
-  
-  .hobbies ul {
-    list-style: none;
-  }
-  
-  .hobbies li {
-    font-size: 1.2em;
-    margin: 10px 0;
-    transition: transform 0.3s ease;
-  }
-  
-  .hobbies li:hover {
-    transform: translateX(10px);
-  }
-  
-  /* Footer - Social Icons */
-  footer {
-    margin-bottom: 50px;
-  }
-  
-  .social-icon {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px 15px;
-    font-size: 1em;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .social-icon.instagram {
-    background-color: #e4405f;
-  }
-  
-  .social-icon.whatsapp {
-    background-color: #25d366;
-  }
-  
-  .social-icon:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5; /* Fallback background color */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: url('wallpaper.jpg');
+  background-size: cover; /* Ensures the wallpaper covers the entire container */
+  background-position: center;
+  background-attachment: fixed; /* Makes the background stay in place while scrolling */
+  background-repeat: no-repeat; /* Avoids tiling */
+}
+
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Places the animated background behind all other elements */
+  opacity: 0.8; /* Slight transparency for visual layering */
+}
+
+/* Profile Section */
+.profile__picture img {
+  border-radius: 50%; /* Makes the profile picture circular */
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid white; /* Highlights the picture against the background */
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Slightly darker shade on hover */
+}
+
+/* Portfolio Showcase */
+.portfolio-showcase {
+  margin: 40px 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.portfolio__project {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio__project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hobbies Section */
+.hobbies ul {
+  list-style: none;
+}
+
+.hobbies li {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
