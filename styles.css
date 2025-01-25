@@ -6,7 +6,7 @@
 }
 
 body, html {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Merriweather', Playfair Display;
   overflow-x: hidden;
   color: #333;
 }
@@ -126,11 +126,11 @@ footer {
 }
 
 .social-icon.instagram {
-  background-color: #e4405f;
+  background-color: #8E44AD;
 }
 
 .social-icon.whatsapp {
-  background-color: #25d366;
+  background-color: #ID3557;
 }
 
 .social-icon:hover {
