@@ -1,84 +1,130 @@
-/* Modern Responsive Styles */
-*, *::before, *::after {
-  box-sizing: border-box;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #2A2A72;
-  --secondary-color: #FF0075;
-  --accent-color: #00C2FF;
-  --dark-bg: #0A0A2E;
-  --light-text: #F8F9FA;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: var(--light-text);
-  background: var(--dark-bg);
+body, html {
+  font-family: 'Merriweather', Playfair Display;
   overflow-x: hidden;
+  color: #333;
 }
 
-/* Responsive Layout */
+/* Container */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Responsive Hero Section */
-.hero {
+  position: relative;
+  width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 4rem 2rem;
+  justify-content: space-between;
+  text-align: center;
+  background: url('wallpaper.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+/* Profile Section */
+.profile {
+  margin-top: 50px;
 }
 
 .profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin: 0 auto 2rem;
+  overflow: hidden;
   border: 5px solid #fff;
-  box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+  display: inline-block;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 2rem 1rem;
-  }
-  
-  .headline {
-    font-size: 2rem;
-  }
-  
-  .social-links {
-    flex-wrap: wrap;
-  }
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Social Icons */
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin: 2rem 0;
+.intro {
+  margin: 20px 0;
+}
+
+.intro h1 {
+  font-size: 2em;
+  color: #222;
+}
+
+.intro h1 span {
+  color: #ff0075;
+}
+
+.intro p {
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #444;
+}
+
+button {
+  background-color: #ff0075;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e60068;
+  transform: scale(1.05);
+}
+
+/* Hobbies Section */
+.hobbies {
+  margin: 50px 0;
+}
+
+.hobbies h2 {
+  font-size: 1.8em;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hobbies li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.hobbies li:hover {
+  transform: translateX(10px);
+}
+
+/* Footer - Social Icons */
+footer {
+  margin-bottom: 50px;
 }
 
 .social-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-  background: rgba(255,255,255,0.1);
-  color: var(--light-text);
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 15px;
+  font-size: 1em;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 /* Social Icons */
 .social-icons {
   display: flex;
@@ -114,7 +160,59 @@ body {
 .fa-snapchat { background: #FFFC00; color: #000; }
 .fa-github { background: #333333; }
 
-.social-icon:hover {
-  transform: translateY(-3px);
-  background: var(--secondary-color);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 1.8em;
+  }
+
+  .intro p {
+    font-size: 1em;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  .other services h2 {
+    font-size: 1.5em;
+  }
+
+  .other services li {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.5em;
+  }
+
+  .intro p {
+    font-size: 0.9em;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+
+  .other services h2 {
+    font-size: 1.2em;
+  }
+
+  .other service li {
+    font-size: 0.9em;
+  }
 }
