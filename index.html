@@ -3,55 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Freeman Portfolio</title>
+  <meta name="description" content="Brian Freeman - Professional UI/UX Designer & Full Stack Developer">
+  <title>Brian Freeman | Digital Solutions Architect</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Animated Background -->
-    <div class="animated-bg"></div>
+  <!-- Animated Background -->
+  <div class="gradient-bg"></div>
 
-    <!-- Profile Section -->
-    <section class="profile">
-      <div class="profile-picture">
-        <img src="profile.jpg" alt="Brian Freeman">
-      </div>
-      <div class="intro">
-        <h1>Hi, I'm <span>Brian Freeman</span></h1>
-        <p>I'm a <strong>UI/UX Designer</strong> and <strong>Developer</strong></p>
-        <button onclick="window.location.href='mailto:b37614310@gmail.com'">Hire Me</button>
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" data-aos="fade-up">
+      <div class="hero-content">
+        <div class="profile-picture" data-aos="zoom-in">
+          <img src="profile.jpg" alt="Brian Freeman Professional Headshot">
+        </div>
+        <h1 class="headline">Transforming Ideas into<br><span class="highlight">Digital Experiences</span></h1>
+        <p class="subheadline">UI/UX Specialist & Full Stack Developer</p>
+        <div class="cta-group">
+          <a href="#work" class="cta-btn primary">View Work</a>
+          <a href="#contact" class="cta-btn secondary">Let's Connect</a>
+        </div>
       </div>
     </section>
 
-    <!-- Other services Section -->
-    <section class="hobbies">
-      <h2>Other Services</h2>
-      <ul>
-        <li>🎨 Graphic Design</li>
-        <li>📚  Database Administration</li>
-        <li>📸 Photography</li>
-        <li>👨‍💻 Web Development</li>
-      </ul>
+    <!-- Featured Projects -->
+    <section id="work" class="projects">
+      <h2 class="section-title" data-aos="fade-right">Featured Work</h2>
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <article class="project-card" data-aos="flip-left">
+          <div class="project-media">
+            <img src="project1.jpg" alt="E-commerce Platform Project">
+          </div>
+          <div class="project-info">
+            <h3>Modern E-commerce Platform</h3>
+            <div class="tech-stack">
+              <i class="fab fa-react"></i>
+              <i class="fab fa-node"></i>
+              <i class="fas fa-database"></i>
+            </div>
+            <p class="project-description">Led development of full-stack solution handling 10k+ daily transactions</p>
+            <a href="#" class="project-link">Case Study →</a>
+          </div>
+        </article>
+        <!-- Add more projects following same structure -->
+      </div>
     </section>
 
-    <!-- Social Media Links -->
-    <footer>
-      <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" target="_blank" class="social-icon instagram">Instagram</a>
-      <a href="https://wa.me/+254746415264?text=𝐇𝐢%20𝐁𝐫𝐢𝐚𝐧👋" target="_blank" class="social-icon whatsapp">WhatsApp</a>
-    
+    <!-- Skills Section -->
+    <section class="skills">
+      <h2 class="section-title" data-aos="fade-right">Technical Arsenal</h2>
+      <div class="skills-grid">
+        <div class="skill-category" data-aos="zoom-in">
+          <h3>Frontend Mastery</h3>
+          <ul>
+            <li><i class="fab fa-react"></i>React Ecosystem</li>
+            <li><i class="fab fa-js"></i>TypeScript</li>
+            <li><i class="fas fa-palette"></i>Figma/Sketch</li>
+          </ul>
+        </div>
+        <!-- Add more skill categories -->
+      </div>
+    </section>
 
-     <p></p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2 class="section-title" data-aos="fade-right">Let's Collaborate</h2>
+      <form class="contact-form" data-aos="zoom-in">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Project Details" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="cta-btn primary">Send Message</button>
+      </form>
+    </section>
 
-
-  <p>&copy; <span id="year"></span> Brian Freeman.All Rights Reserved</p>
-
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    <!-- Social Footer -->
+    <footer class="main-footer">
+      <div class="social-links">
+        <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" 
+           target="_blank" 
+           class="social-icon instagram"
+           rel="noopener">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/+254746415264?text=𝐇𝐢%20𝐁𝐫𝐢𝐚𝐧👋" 
+           target="_blank" 
+           class="social-icon whatsapp"
+           rel="noopener">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+      <p class="copyright">&copy; <span id="year"></span> Brian Freeman. All rights reserved</p>
     </footer>
-  </div>
+  </main>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Project card hover effect
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
 </body>
 </html>
