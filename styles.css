@@ -1,4 +1,4 @@
-/* Modern CSS Reset */
+/* Modern Responsive Styles */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -21,79 +21,66 @@ body {
   overflow-x: hidden;
 }
 
-.gradient-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(45deg, var(--primary-color), var(--dark-bg));
-  z-index: -1;
+/* Responsive Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Profile Picture - Retained Rounded Style */
+/* Responsive Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
 .profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  overflow: hidden;
   margin: 0 auto 2rem;
   border: 5px solid #fff;
   box-shadow: 0 10px 30px rgba(255,255,255,0.2);
 }
 
-/* Social Icons - Maintained Your Links */
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+  }
+  
+  .headline {
+    font-size: 2rem;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Social Icons */
 .social-links {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
 .social-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: all 0.3s ease;
-}
-
-.social-icon.instagram {
-  background: linear-gradient(45deg, #405DE6, #E1306C);
-}
-
-.social-icon.whatsapp {
-  background: #25D366;
+  background: rgba(255,255,255,0.1);
+  color: var(--light-text);
 }
 
 .social-icon:hover {
-  transform: translateY(-5px);
-}
-
-/* Rest of your professional styles remain unchanged */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-}
-
-.headline {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ... (other styles remain same as previous professional version) ... */
-
-@media (max-width: 768px) {
-  .headline {
-    font-size: 2.5rem;
-  }
+  transform: translateY(-3px);
+  background: var(--secondary-color);
 }
