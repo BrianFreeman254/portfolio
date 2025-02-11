@@ -79,6 +79,40 @@ body {
   background: rgba(255,255,255,0.1);
   color: var(--light-text);
 }
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+/* Specific platform colors */
+.fa-instagram { background: #E1306C; }
+.fa-whatsapp { background: #25D366; }
+.fa-linkedin { background: #0077B5; }
+.fa-facebook { background: #1877F2; }
+.fa-x-twitter { background: #000000; }
+.fa-tiktok { background: #000000; }
+.fa-snapchat { background: #FFFC00; color: #000; }
+.fa-github { background: #333333; }
 
 .social-icon:hover {
   transform: translateY(-3px);
