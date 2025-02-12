@@ -4,9 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brian Freeman Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
+
+  <style>
+    /* Ensuring all social media icons appear correctly */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      font-size: 24px;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.2);
+      color: #ffcc00;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -25,12 +55,12 @@
       </div>
     </section>
 
-    <!-- Other services Section -->
+    <!-- Other Services Section -->
     <section class="hobbies">
       <h2>Other Services</h2>
       <ul>
         <li>🎨 Graphic Design</li>
-        <li>📚  Database Administration</li>
+        <li>📚 Database Administration</li>
         <li>📸 Photography</li>
         <li>👨‍💻 Web Development</li>
       </ul>
@@ -42,7 +72,7 @@
         <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" target="_blank" class="social-icon">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://wa.me/+254746415264?text=𝐇𝐢%20𝐁𝐫𝐢𝐚𝐧👋" target="_blank" class="social-icon">
+        <a href="https://wa.me/254746415264?text=𝐇𝐢%20𝐁𝐫𝐢𝐚𝐧👋" target="_blank" class="social-icon">
           <i class="fab fa-whatsapp"></i>
         </a>
         <a href="YOUR_LINKEDIN_URL" target="_blank" class="social-icon">
@@ -65,7 +95,7 @@
         </a>
       </div>
 
-      <p>&copy; <span id="year"></span> Brian Freeman.All Rights Reserved</p>
+      <p>&copy; <span id="year"></span> Brian Freeman. All Rights Reserved.</p>
 
       <script>
         document.getElementById("year").textContent = new Date().getFullYear();
