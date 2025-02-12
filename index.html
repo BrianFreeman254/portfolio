@@ -15,26 +15,43 @@
       justify-content: center;
       gap: 15px;
       flex-wrap: wrap;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .social-icon {
       font-size: 24px;
       color: #fff;
+      background: rgba(255, 255, 255, 0.1); /* Subtle faded background */
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
       text-decoration: none;
-      transition: transform 0.3s ease, color 0.3s ease;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
     }
 
     .social-icon:hover {
       transform: scale(1.2);
+      background: rgba(255, 255, 255, 0.3); /* Slightly more visible on hover */
       color: #ffcc00;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
+      background: #1a1a1a; /* Dark grey instead of black */
       color: white;
+    }
+
+    /* "Let's Connect" Title */
+    .connect-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ddd; /* Faded white */
     }
   </style>
 </head>
@@ -68,6 +85,7 @@
 
     <!-- Social Media Links -->
     <footer>
+      <p class="connect-title">Let's Connect</p>
       <div class="social-icons">
         <a href="https://www.instagram.com/brian_wachiye?igsh=MTB0eGVoZGNzaGFtcw==" target="_blank" class="social-icon">
           <i class="fab fa-instagram"></i>
